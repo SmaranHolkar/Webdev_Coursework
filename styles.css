@@ -58,3 +58,11 @@ html{
     margin-right: 15px;
     border-radius: 5px;
   }
+
+  .maindiv{
+    background-color: #ddd;
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+  }
