@@ -3,30 +3,35 @@ html{
   }
   
   body{
-    background-color: blanchedalmond;
-    margin-top: 70px;
+    margin: 0;
+    background-color: #ffffff;
   }
   
   header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 70px;
-    width: 100%;
-    background-color: whitesmoke;
-    border: 1px solid #e7e7e7;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 2px;
+    color: white;
+    background-color: #0087ca;
   }
   
   header ul {
-    list-style-type: none;
+    display: flex;
     margin: 0;
     padding: 0;
-    margin-top: 15px;
-    padding: 10px;
   }
   
   header li {
     display: inline;
+    list-style-type: none;
+  }
+  header li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
   }
   
   header a{
@@ -39,11 +44,11 @@ html{
   }
   
   header a.active{
-    background-color: #ddd;
+    background-color: #385593;
   }
   
   header a:hover:not(.active) {
-    background-color: #ddd;
+    background-color: #385593;
   }
   
   .right{
@@ -52,11 +57,23 @@ html{
   }
   
   .logo {
-    float: left;
-    margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 15px;
-    border-radius: 5px;
+    font-size: 1.5rem;
+    margin: .5rem;
+    display: inline-block;
+    position: relative;
+  }
+
+  .logo::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
   }
 
   .maindiv{
@@ -66,3 +83,12 @@ html{
     margin-left: auto;
     margin-top: 50px;
   }
+
+  h1{
+    background-image: url("./images/wexor-tmg-L-2p8fapOA8-unsplash.jpg");
+    padding: 10px;
+    background-size: cover;
+    color: aliceblue;
+    margin: 0;
+    
+    }

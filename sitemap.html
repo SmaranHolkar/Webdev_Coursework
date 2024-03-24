@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .sitemap-svg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sitemap {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+    .rect rect:hover {
+        fill: #2e9eed; 
+        cursor: pointer;
+    }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img class="logo" src="logo.png" alt="logo" width="50 ">
+        <nav>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a class="active" href="">Gallery</a></li>
+            <li><a href="">Shop</a></li>
+            <li><a href="">Profile</a></li>
+            <li><a href="">Site Map</a></li>
+            <li class="right"><a href="">Feedback</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <h1>Sitemap</h1>
+    </div>
+
+    <div class="sitemap">
+        <!-- Site Map -->
+        <svg class="sitemap-svg" height="500" width="1000" >
+            <!-- Splash Screen -->
+            <g class="rect" id="splashScreen">
+                <rect x="15" y="30" height="50" width="150" 
+                        stroke="purple" fill="none" stroke-width="2" />
+                <text fill="#000" font-size="14" x="90" y="60"
+                        text-anchor="middle">
+                        Splash Screen</text>
+            </g>
+            <!-- Connecting Line -->
+            <g class="rect" id="groupId2">
+                <line id="shapeId2" stroke="purple" stroke-width="2" 
+                        x1="90" y1="80" x2="90" y2="130"></line>
+                <polyline points="95, 120 90, 130 85, 120" 
+                        stroke="purple" stroke-width="2" fill="none" />
+            </g>
+            <!-- Home Page -->
+            <g class="rect" id="groupId1">
+                <a href="splash.html">
+                    <rect x="15" y="130" height="50" width="150" 
+                        stroke="purple" fill="none" stroke-width="2" />
+                    <text fill="#000" font-size="14" x="90" y="160"
+                         text-anchor="middle">
+                        Home Page
+                    </text>
+                </a>
+            </g>
+
+            <g class="rect" id="navbar">
+                <line id="navbarLine" stroke="purple" stroke-width="2" 
+                        x1="90" y1="180" x2="90" y2="230"></line>
+                <polyline points="95, 220 90, 230 85, 220" 
+                        stroke="purple" stroke-width="2" fill="none" />
+                <a href="navbar.html">
+                    <rect x="10" y="230" height="50" width="150" 
+                        stroke="purple" fill="none" stroke-width="2" />
+                    <text fill="#000" font-size="14" x="90" y="260"
+                        font-family="Arial" text-anchor="middle">
+                        Navbar
+                    </text>
+                </a>
+            </g>
+
+        
+
+        
+        </svg>
+    </div>
+    
+</body>
+</html>

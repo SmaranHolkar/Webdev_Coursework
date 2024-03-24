@@ -4,19 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
+    <link rel="stylesheet" href="./styles.css">
+
+    <style>
+    .slideshow {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50vh;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    }
+
+    .slide {
+    width: 50%;
+    height: auto;
+    margin: 2px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    justify-content: center;
+    text-align: center;
+    font-size:xx-large;
+    background-repeat: no-repeat;
+    color: aliceblue;
+    /* Add background color/image for each slide */
+    }
+
+    .slide:hover{
+        cursor: pointer;
+    }
+
+    .slide p{
+        visibility: hidden;
+    }
+
+    .slide h4{
+        background: rgba(0, 5, 255, 0.2);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+
+    .slide.expanded {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+    }
+    .slide.expanded p {
+        visibility: visible;
+        background: rgba(0, 5, 255, 0.2);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+
+    .slide.expanded h4 {
+        background: rgba(0, 5, 255, 0.2);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+
+    .slideshow-images li{
+        display: inline-block;
+        cursor: pointer;
+    }
+    .slideshow-images ul{
+        text-align: center;
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+
+    </style>
 </head>
+
 <body>
 
-    
     <header>
-
+        <img class="logo" src="logo.png" alt="logo" width="50 ">
+        <nav>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a class="active" href="">Gallery</a></li>
+            <li><a href="">Shop</a></li>
+            <li><a href="">Profile</a></li>
+            <li><a href="">Site Map</a></li>
+            <li class="right"><a href="">Feedback</a></li>
+          </ul>
+        </nav>
     </header>
 
+    <div class="banner">
+        <h1>Gallery : Life underwater</h1>
     
-
-    <div class="">
-        
     </div>
+
+<div class="Gallery">
+
+    <div class="slideshow">
+
+        <!-- Slide 1 -->
+        <div id="cleaning_ocean" class="slide" style="background-image: url(./images/Medium-230918_System03_Trip1_extraction_S1H_pic_55.jpg.webp); background-size: cover; background-position: center;" >
+            <p>There has been many startups and businesses who have started to clean up oceans using different techniques.</p>
+            <p><a href="https://theoceancleanup.com/" target="_blank">The source from Oceancleanup</a></p>
+        </div>
+        <!-- Slide 2 -->
+
+        <div id="dirty_water" class="slide" style="background-image: url(./images/naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg); background-size: cover; background-position: center;" >
+            <p>There has been many startups and businesses who have started to clean up oceans using different techniques.</p>
+
+        </div>
+        <!-- Slide 3 -->
+
+        <div id="turtle" class="slide" style="background-image: url(./images/wexor-tmg-L-2p8fapOA8-unsplash.jpg); background-size: cover; background-position: center;" >
+            <p>There has been many startups and businesses who have started to clean up oceans using different techniques.</p>
+        </div>
+
+    </div>
+
+    <div class="slideshow-images">
+        <ul>
+            <li><a href="#cleaning_ocean"><img src="./images/Medium-230918_System03_Trip1_extraction_S1H_pic_55.jpg.webp" alt="Cleaning the ocean with boat" style="height: 100px;" href></a></li>
+            <li><a href="#dirty_water"><img src="./images/naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg" alt="Rubbish in ocean" style="height: 100px;"></a></li>
+            <li><a href="#turtle"><img src="./images/wexor-tmg-L-2p8fapOA8-unsplash.jpg" alt="Rubbish in ocean" style="height: 100px;"></a></li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+    <hr>
+
+    <span><a href="https://www.westminster.ac.uk/">University of westminster</a></span>
+
+    <script>
+            document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.slide');
+        slides.forEach(slide => {
+            slide.addEventListener('click', function() {
+                if (!slide.classList.contains('expanded')) {
+                    slides.forEach(s => s.classList.remove('expanded'));
+                    slide.classList.add('expanded');
+                } else {
+                    slide.classList.remove('expanded');
+                }
+            });
+        });
+    });
+    </script>
 
 </body>
 </html>
