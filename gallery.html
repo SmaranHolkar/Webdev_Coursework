@@ -7,29 +7,28 @@
     <link rel="stylesheet" href="./styles.css">
 
     <style>
-    .slideshow {
+.slideshow {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 50vh;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    justify-content: center; /* Center horizontally */
+}
 
-    }
-
-    .slide {
+.slide {
     width: 50%;
     height: auto;
     margin: 2px;
     flex-shrink: 0;
     scroll-snap-align: start;
-    justify-content: center;
     text-align: center;
-    font-size:xx-large;
-    background-repeat: no-repeat;
+    font-size: 24px; /* Adjust the font size as needed */
     color: aliceblue;
+    background-repeat: no-repeat; /* Specify whether the background should repeat or not */
     /* Add background color/image for each slide */
-    }
+}
 
     .slide:hover{
         cursor: pointer;
@@ -76,6 +75,8 @@
         margin-left: 10%;
     }
 
+
+
     </style>
 </head>
 
@@ -106,6 +107,15 @@
 
         <!-- Slide 1 -->
         <div id="cleaning_ocean" class="slide" style="background-image: url(./images/Medium-230918_System03_Trip1_extraction_S1H_pic_55.jpg.webp); background-size: cover; background-position: center;" >
+            
+                <label for="cars">Choose a car:</label>
+                <select name="cars" id="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+                </select>
+            
             <p>There has been many startups and businesses who have started to clean up oceans using different techniques.</p>
             <p><a href="https://theoceancleanup.com/" target="_blank">The source from Oceancleanup</a></p>
         </div>
