@@ -6,6 +6,65 @@
   <title>Home Page</title>
   <link rel="icon" type="image/x-icon" href="images/logo.png">
   <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <style>
+    a {
+      text-decoration: none;
+      color: black;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: xx-large;
+      text-align: center;
+    }
+
+    h2 {
+      text-transform: capitalize;
+      text-decoration: underline;
+      font-size: x-large;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 15px;
+    }
+
+    .card-icon {
+      width: 200px;
+      height: auto;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      border-radius: 10px;
+      margin-left: 20px;
+    }
+
+    .card-text {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .card-paragraph {
+      text-align: center;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    .sourced-images {
+      background-color: whitesmoke;
+      padding: 5px;
+      width: fit-content;
+      margin-top: 40px;
+      margin-left: auto;
+      font-size: small;
+      border-top-left-radius: 5px;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -23,11 +82,73 @@
     </nav>
   </header>
 
-  <main>
-    <div class="maindiv">
-      Come content
-    </div>
+  <main class="background-im">
+    <h1>Home Page</h1>
+    <div class="container">
+      <a href="gallery.html" class="card">
+        <div>
+          <img class="card-icon" src="./images/home/gallery.png" alt="gallery">
+        </div>
+        <div class="card-text">
+          <h2>Gallery</h2>
+          <p class="card-paragraph">
+            Welcome to our Gallery page that shows one of the UN's sustainable goals, life below water.
+            View an experince where you will journey through the experince that oceans has and how humans have impacted it.
+            <br><br>
+            Visit here to learn more.
+          </p>
+        </div>
+      </a>
 
+      <a href="shop.html" class="card">
+        <div>
+          <img class="card-icon" src="./images/home/shop.png" alt="shop">
+        </div>
+        <div class="card-text">
+          <h2>Shop</h2>
+          <p class="card-paragraph">
+            Welcome to the life underwater sustainability shop!
+            Browse through the shop and find items that can help you make an impact on the Oceans.
+            Find items that are biodegradable and reusable products.
+            <br><br>
+            Visit here to learn more.
+          </p>
+        </div>
+      </a>
+
+      <a href="profile.html" class="card">
+        <div>
+          <img class="card-icon" src="./images/home/profile.png" alt="profile">
+        </div>
+        <div class="card-text">
+          <h2>Profile</h2>
+          <p class="card-paragraph">
+            Welcome to our Profile page, where you can create a your own profile.
+            <br><br>
+            Visit here to learn more.
+          </p>
+        </div>
+      </a>
+
+      <a href="sitemap.html" class="card">
+        <div>
+          <img class="card-icon" src="images/home/sitemap.png" alt="logo">
+        </div>
+        <div class="card-text">
+          <h2>Site Map</h2>
+          <p class="card-paragraph">
+            Welcome to our Site Map. Displaying all the webpages for this website. Showing links to the Gallery and etc
+            <br><br>
+            Visit here to learn more.
+          </p>
+        </div>
+      </a>
+    </div>
+    <div class="sourced-images">Background Image by <a
+        href="https://unsplash.com/@naja_bertolt_jensen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Naja
+        Bertolt Jensen</a> on <a
+        href="https://unsplash.com/photos/black-and-white-bird-flying-over-the-sea-Uu1CtKngEXY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Unsplash</a>
+    </div>
   </main>
 </body>
 

@@ -13,8 +13,7 @@ header {
   align-items: center;
   border-bottom: solid 2px;
   color: white;
-  background-color: #0087ca;
-  width: 100%;
+  background-color: #418ce7;
   height: fit-content;
   padding: .5rem;
   border-bottom: solid 2px whitesmoke;
@@ -40,11 +39,21 @@ header a {
 }
 
 header a.active {
-  background-color: #385593;
+  background-color: #2d5e99;
+  text-decoration: underline dotted;
+  text-underline-offset: 5px;
 }
 
 header a:hover:not(.active) {
-  background-color: #385593;
+  background-color: #2d5e99;
+}
+
+h1 {
+  background-image: url("./images/wexor-tmg-L-2p8fapOA8-unsplash.jpg");
+  padding: 10px;
+  background-size: cover;
+  color: aliceblue;
+  margin: 0;
 }
 
 .right {
@@ -59,10 +68,26 @@ header a:hover:not(.active) {
   margin-left: 10px;
 }
 
-h1 {
-  background-image: url("./images/wexor-tmg-L-2p8fapOA8-unsplash.jpg");
-  padding: 10px;
+.card {
+  text-decoration: none;
+  width: 1100px;
+  height: fit-content;
+  background-color: #2d5e99;
+  border: 2px solid #4e9aff;
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+  color: white;
+  padding: 20px;
+}
+
+.card:hover {
+  background-color: #418ce7;
+}
+
+.background-im {
+  background-image: url("./images/home/naja-bertolt-jensen-Uu1CtKngEXY-unsplash.jpg");
   background-size: cover;
-  color: aliceblue;
-  margin: 0;
+  background-position: center;
+  background-color: aquamarine;
 }
