@@ -7,38 +7,29 @@
     <link rel="stylesheet" href="./styles.css">
 
     <style>
-.slideshow {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 50vh;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    justify-content: center; /* Center horizontally */
-}
+    .slideshow {
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        width: 100%;
+        height: 50vh; /* Adjust height as needed */
+    }
 
-.slide {
-    width: 50%;
-    height: auto;
-    margin: 2px;
-    flex-shrink: 0;
-    scroll-snap-align: start;
-    text-align: center;
-    font-size: 24px; /* Adjust the font size as needed */
-    color: aliceblue;
-    background-repeat: no-repeat; /* Specify whether the background should repeat or not */
-    /* Add background color/image for each slide */
-}
+    .slide {
+        flex-shrink: 0;
+        width: 100%;
+        scroll-snap-align: start;
+    }
 
-    .slide:hover{
+    .slide:hover {
         cursor: pointer;
     }
 
-    .slide p{
+    .slide p {
         visibility: hidden;
     }
 
-    .slide h4{
+    .slide h4 {
         background: rgba(0, 5, 255, 0.2);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
@@ -52,6 +43,7 @@
         left: 0;
         z-index: 9999;
     }
+
     .slide.expanded p {
         visibility: visible;
         background: rgba(0, 5, 255, 0.2);
@@ -65,72 +57,99 @@
         -webkit-backdrop-filter: blur(20px);
     }
 
-    .slideshow-images li{
+    .slideshow-images li {
         display: inline-block;
         cursor: pointer;
     }
-    .slideshow-images ul{
+
+    .slideshow-images ul {
         text-align: center;
         margin-right: 10%;
         margin-left: 10%;
     }
 
+    #cleaning_ocean {
+        background-image: url(./images/Medium-230918_System03_Trip1_extraction_S1H_pic_55.jpg.webp);
+        background-size: cover;
+        background-position: center;
+    }
 
+    #dirty_water {
+        background-image: url(./images/naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+    }
 
+    #turtle {
+        background-image: url(./images/wexor-tmg-L-2p8fapOA8-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .slide img{
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover;
+    }
+
+    .source{
+        float: right;
+        
+    }
     </style>
 </head>
-
 <body>
 
-    <header>
-        <img class="logo" src="logo.png" alt="logo" width="50 ">
-        <nav>
-          <ul>
-            <li><a href="">Home</a></li>
-            <li><a class="active" href="">Gallery</a></li>
-            <li><a href="">Shop</a></li>
-            <li><a href="">Profile</a></li>
-            <li><a href="">Site Map</a></li>
-            <li class="right"><a href="">Feedback</a></li>
-          </ul>
-        </nav>
-    </header>
+<header>
+    <img class="logo" src="logo.png" alt="logo" width="50 ">
+    <nav>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a class="active" href="">Gallery</a></li>
+        <li><a href="">Shop</a></li>
+        <li><a href="">Profile</a></li>
+        <li><a href="">Site Map</a></li>
+        <li class="right"><a href="">Feedback</a></li>
+      </ul>
+    </nav>
+</header>
 
-    <div class="banner">
-        <h1>Gallery : Life underwater</h1>
-    
-    </div>
+<div class="banner">
+    <h1>Gallery : Life underwater</h1>
+</div>
 
 <div class="Gallery">
+        <div class="font_change">
+            <label >Change font of expanded slide view:</label>
+            <select id="fontSelector">
+                <option value="Arial">Arial</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Courier New">Courier New</option>
+            </select>
+        </div>
+        <div class="colour_change">
+            <label >Change colour of expanded slide view:</label>
+            <select id="colorSelector">
+                <option value="#333">Black</option>
+                <option value="#ff0000">Red</option>
+                <option value="#FFFF00">Yellow</option>
+            </select>
+        </div>
 
     <div class="slideshow">
-
         <!-- Slide 1 -->
-        <div id="cleaning_ocean" class="slide" style="background-image: url(./images/Medium-230918_System03_Trip1_extraction_S1H_pic_55.jpg.webp); background-size: cover; background-position: center;" >
-            
-                <label for="cars">Choose a car:</label>
-                <select name="cars" id="cars">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-                </select>
-            
-            <p>There has been many startups and businesses who have started to clean up oceans using different techniques.</p>
-            <p><a href="https://theoceancleanup.com/" target="_blank">The source from Oceancleanup</a></p>
+        <div id="cleaning_ocean" class="slide">
+            <p>There have been many startups and businesses who have started to clean up oceans using different techniques.</p>
+            <p class="source"><a href="https://theoceancleanup.com/" target="_blank">The source from Oceancleanup</a></p>
         </div>
         <!-- Slide 2 -->
-
-        <div id="dirty_water" class="slide" style="background-image: url(./images/naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg); background-size: cover; background-position: center;" >
-            <p>There has been many startups and businesses who have started to clean up oceans using different techniques.</p>
-
+        <div id="dirty_water" class="slide">
+            <p>There have been many startups and businesses who have started to clean up oceans using different techniques.</p>
         </div>
         <!-- Slide 3 -->
-
-        <div id="turtle" class="slide" style="background-image: url(./images/wexor-tmg-L-2p8fapOA8-unsplash.jpg); background-size: cover; background-position: center;" >
-            <p>There has been many startups and businesses who have started to clean up oceans using different techniques.</p>
+        <div id="turtle" class="slide">
+            <p></p>
         </div>
-
     </div>
 
     <div class="slideshow-images">
@@ -140,17 +159,14 @@
             <li><a href="#turtle"><img src="./images/wexor-tmg-L-2p8fapOA8-unsplash.jpg" alt="Rubbish in ocean" style="height: 100px;"></a></li>
         </ul>
     </div>
-
 </div>
 
+<hr>
 
+<span><a href="https://www.westminster.ac.uk/">University of Westminster</a></span>
 
-    <hr>
-
-    <span><a href="https://www.westminster.ac.uk/">University of westminster</a></span>
-
-    <script>
-            document.addEventListener('DOMContentLoaded', function() {
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
         const slides = document.querySelectorAll('.slide');
         slides.forEach(slide => {
             slide.addEventListener('click', function() {
@@ -163,7 +179,23 @@
             });
         });
     });
-    </script>
+
+    const fontSelector = document.getElementById('fontSelector');
+    const colorSelector = document.getElementById('colorSelector');
+    const slides = document.querySelectorAll('.slide');
+
+    fontSelector.addEventListener('change', () => {
+        slides.forEach(slide => {
+            slide.style.fontFamily = fontSelector.value;
+        });
+    });
+
+    colorSelector.addEventListener('change', () => {
+        slides.forEach(slide => {
+            slide.style.color = colorSelector.value;
+        });
+    });
+</script>
 
 </body>
 </html>
