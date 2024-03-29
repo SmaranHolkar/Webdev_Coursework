@@ -4,10 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Allows content to wrap if needed */
+  width: 80%; /* Adjust width as needed */
+  margin: 10px auto; /* Center the container horizontally */
+}
+
+.image-text-pair {
+  display: flex; /* Make elements side-by-side */
+  width: 100%; /* Each pair takes full width */
+  margin-bottom: 1rem; /* Add space between pairs */
+}
+
+.image {
+  width: 50%; /* Adjust image width as needed */
+  object-fit: cover; /* Scales image to fill container while maintaining aspect ratio */
+}
+
+.text-content {
+  width: 50%; /* Adjust text content width as needed */
+  padding: 1rem; /* Add some padding for better readability */
+}
+
+h2 {
+  margin-bottom: 1rem; /* Add space between headline and text */
+}
+    </style>
+
 </head>
 <body>
+
     <header>
-        <img class="logo" src="logo.png" alt="logo" width="50 ">
+        <img class="logo" src="./images/logo.png" alt="logo" width="50 ">
         <nav>
           <ul>
             <li><a href="">Home</a></li>
@@ -19,5 +51,28 @@
           </ul>
         </nav>
     </header>
+
+    <div class="banner">
+        <h1>Content Student 4. Cleaning ocean for sealife</h1>
+    </div>
+
+    <div class="container">
+        <div class="image-text-pair">
+          <img src="./images/naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg" alt="Image description 1" class="image">
+          <div class="text-content">
+            <h2>How plastic affects sealife?</h2>
+            <p>Sealife does get affected by plastic in the ocean. Firstly they can get tangled in plastic and may die due to othe sealife. They may die to to choking on the plastic.</p>
+          </div>
+        </div>
+        <div class="image-text-pair flipped">
+          <div class="text-content">
+            <h2>Headline 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec diam dui. Donec eu elit nisl. Nulla facilisi eros in odio euismod, sed bibendum magna auctor vitae. Donec nec diam dui. Donec eu elit nisl. Nulla facilisi eros in odio euismod, sed bibendum magna auctor vitae.</p>
+          </div>
+          <img src="./images/Medium-230918_System03_Trip1_extraction_S1H_pic_55.jpg.webp" alt="Image description 2" class="image">
+        </div>
+      </div>
+
+
 </body>
 </html>
