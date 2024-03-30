@@ -8,23 +8,34 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
 
   <style>
+    /* 
+    Removes link styles and just makes it black
+    while centering text to the center */
     a {
       text-decoration: none;
       color: black;
       text-align: center;
     }
 
+    /*
+    Just making the heading 1 font size larger
+    Centering Text to the page */
     h1 {
       font-size: xx-large;
       text-align: center;
     }
 
+    /* 
+    Making the heading larger
+    Adding a underline to it */
     h2 {
-      text-transform: capitalize;
       text-decoration: underline;
       font-size: x-large;
     }
 
+    /* 
+    Main div to contain all the link cards
+    Makes the cards stack on top of each other having a small gap inbetween */
     .container {
       display: flex;
       align-items: center;
@@ -33,27 +44,57 @@
       margin-top: 15px;
     }
 
+    /* 
+    Setting the card width to 1100 pixels
+    Having a background colour and border and border radius for a water look
+    Padding by 20px, so nothing touches the edges
+     */
+    .card {
+      text-decoration: none;
+      width: 1100px;
+      height: fit-content;
+      background-color: #2d5e99;
+      border: 2px solid #4e9aff;
+      display: flex;
+      color: white;
+      padding: 20px;
+    }
+
+    /* 
+    When the card is hover the background changes */
+    .card:hover {
+      background-color: #418ce7;
+    }
+
+    /* 
+    Setting the images with the icons in the cards
+    Having a width of 200 pixels
+    Having a 20px gap from the left */
     .card-icon {
       width: 200px;
       height: auto;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      border-radius: 10px;
       margin-left: 20px;
     }
 
+    /* 
+    Centering contnet to the center of the card */
     .card-text {
       margin-left: auto;
       margin-right: auto;
     }
 
+    /* 
+    Having the paragraphs in the card centered
+    Adding padding to have a cleaner look */
     .card-paragraph {
       text-align: center;
       padding-left: 40px;
       padding-right: 40px;
     }
 
+    /* 
+    Just a tag that will be at the bottom right of the screen
+    Just making it small while still visible and readable*/
     .sourced-images {
       background-color: whitesmoke;
       padding: 5px;
@@ -63,14 +104,41 @@
       font-size: small;
       border-top-left-radius: 5px;
     }
+
+    /* 
+    Make the content in the container inline
+    Adding a margin to teh legt and right of the screen */
+    #content-container {
+      flex-direction: row;
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    /* 
+    Makes the card width smaller to 500px */
+    #content-card {
+      width: 500px;
+    }
+
+    /* 
+    The content cards removes the padding and makes the text larger */
+    #content-text {
+      padding: 0;
+      font-size: large;
+    }
   </style>
 
 </head>
 
 <body>
+
+  <!-- Navigation bar -->
   <header>
+    <!-- Logo -->
     <img class="logo" src="images/logo.png" alt="logo">
     <nav>
+      <!-- List of all the main links
+      Any class with active, will have a unique look and is depended on what page the user is on -->
       <ul>
         <li><a class="active" href="home.html">Home</a></li>
         <li><a href="gallery.html">Gallery</a></li>
@@ -82,9 +150,17 @@
     </nav>
   </header>
 
+  <!-- Main that has the background class for background image -->
   <main class="background-im">
+    <!-- Heading 1 for the home page -->
     <h1>Home Page</h1>
+
+    <!-- Main div class for the container for the card for the specific pages-->
     <div class="container">
+      <!-- A link that will reference to its specific site
+      In the card there will 2 div's one for the image and the text  -->
+
+      <!-- Link Card for Gallery -->
       <a href="gallery.html" class="card">
         <div>
           <img class="card-icon" src="./images/home/gallery.png" alt="gallery">
@@ -93,13 +169,15 @@
           <h2>Gallery</h2>
           <p class="card-paragraph">
             Welcome to our Gallery page that shows one of the UN's sustainable goals, life below water.
-            View an experince where you will journey through the experince that oceans has and how humans have impacted it.
+            View an experince where you will journey through the experince that oceans has and how humans have impacted
+            it.
             <br><br>
             Visit here to learn more.
           </p>
         </div>
       </a>
 
+      <!-- Link Card for Shop -->
       <a href="shop.html" class="card">
         <div>
           <img class="card-icon" src="./images/home/shop.png" alt="shop">
@@ -116,6 +194,7 @@
         </div>
       </a>
 
+      <!-- Link Card for Profile -->
       <a href="profile.html" class="card">
         <div>
           <img class="card-icon" src="./images/home/profile.png" alt="profile">
@@ -130,6 +209,7 @@
         </div>
       </a>
 
+      <!-- Link Card for Sitemap -->
       <a href="sitemap.html" class="card">
         <div>
           <img class="card-icon" src="images/home/sitemap.png" alt="logo">
@@ -144,10 +224,55 @@
         </div>
       </a>
     </div>
+
+    <!-- Another Container but with small changes for the content pages -->
+    <div class="container" id="content-container">
+      <!-- Each link will have 1 div just for teh text -->
+
+      <!-- Link Card for Student 1's content -->
+      <a href="content_ST1.html" class="card" id="content-card">
+        <div class="card-text">
+          <p class="card-paragraph" id="content-text">
+            View Student 1's Content
+          </p>
+        </div>
+      </a>
+
+      <!-- Link Card for Student 2's content -->
+      <a href="content_ST2.html" class="card" id="content-card">
+        <div class="card-text">
+          <p class="card-paragraph" id="content-text">
+            View Student 2's Content
+          </p>
+        </div>
+      </a>
+
+      <!-- Link Card for Student 3's content -->
+      <a href="content_ST3.html" class="card" id="content-card">
+        <div class="card-text">
+          <p class="card-paragraph" id="content-text">
+            View Student 3's Content
+          </p>
+        </div>
+      </a>
+
+      <!-- Link Card for Student 4's content -->
+      <a href="content_ST4.html" class="card" id="content-card">
+        <div class="card-text">
+          <p class="card-paragraph" id="content-text">
+            View Student 4's Content
+          </p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Just a small Tag to source the background image -->
     <div class="sourced-images">Background Image by <a
-        href="https://unsplash.com/@naja_bertolt_jensen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Naja
+        href="https://unsplash.com/@naja_bertolt_jensen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+        target="_blank">Naja
         Bertolt Jensen</a> on <a
-        href="https://unsplash.com/photos/black-and-white-bird-flying-over-the-sea-Uu1CtKngEXY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Unsplash</a>
+        href="https://unsplash.com/photos/black-and-white-bird-flying-over-the-sea-Uu1CtKngEXY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+        target="_blank">Unsplash</a>
     </div>
   </main>
 </body>
