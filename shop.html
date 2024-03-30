@@ -8,98 +8,107 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <style>
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'poppins', sans-serif;
-  font-size: 18px;
-}
-body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.top{
-  height: 80px;
-  width: 70%;
-  background-color: skyblue;
-  border-radius: 3px;
-  margin: 30px 0px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px;
-}
-.top .logo{
-  font-size: 30px;
-  font-weight: bold;
-  color: white;
-}
-.cart{
-  display: flex;
-  background-color: white;
-  justify-content: space-between;
-  align-items: center;
-  padding: 7px 10px;
-  border-radius: 3px;
-  width: 80px;
-}
-.fa-solid{
-  color: blue;
-}
-.cart p{
-  height: 22px;
-  width: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 22px;
-  background-color: rgb(32, 91, 218);
-  color: blue;
-}
-.container{
-  display: flex;
-  width: 1000px;
-  margin-bottom: 30px;
-}
-#root{
-  width: 60%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
-}
-.sidebar{
-  width: 40%;
-  border-radius: 5px;
-  background-color: #eee;
-  margin-left: 20px;
-  padding: 15px;
-  text-align: center;
-}
-.head{
-  background-color: lightblue;
-  border-radius: 3px;
-  height: 40px;
-  padding: 10px;
-  margin-bottom: 20px;
-  color: white;
-  display: flex;
-  align-items: center;
-}
-.foot{
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0px;
-  padding: 10px 0px;
-  border-top: 1px solid #333;
-}
-#count{
-  background-color: lightblue;
-}
+  .shop {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-.shop {
+  .top {
+    height: 80px;
+    width: 70%;
+    background-color: skyblue;
+    border-radius: 3px;
+    margin: 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+  }
+
+  .top .logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .cart {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 10px;
+    border-radius: 3px;
+    width: 80px;
+  }
+
+  .fa-solid {
+    color: blue;
+  }
+
+  .cart p {
+    height: 22px;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    background-color: rgb(32, 91, 218);
+    color: blue;
+  }
+
+  .container {
+    display: flex;
+    width: 1000px;
+    margin-bottom: 30px;
+  }
+
+  #root {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .sidebar {
+    width: 40%;
+    border-radius: 5px;
+    background-color: #eee;
+    margin-left: 20px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .head {
+    background-color: lightblue;
+    border-radius: 3px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+
+  .foot {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    border-top: 1px solid #333;
+  }
+
+  #count {
+    background-color: lightblue;
+  }
+
+  .shop {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,7 +119,7 @@ body{
     font-family: 'poppins', sans-serif;
     font-size: 18px;
   }
-  
+
   .header {
     height: 80px;
     width: 70%;
@@ -361,12 +370,6 @@ body{
     </nav>
   </header>
 
-<<<<<<< HEAD
-        <div class="top">
-            <h1>Welcome to Shop</h1>
-            <div class="cart"> <img src="images/Cart.jpg" alt="Cart" width="auto" height="29"><p id="count">0</p></div>
-        </div>
-=======
   <div class="shop">
     <div class="header">
       <h1>Welcome to Shop</h1>
@@ -374,7 +377,6 @@ body{
         <p id="count">0</p>
       </div>
     </div>
->>>>>>> d1eb155268218812271eb98b662e6fb83d13a293
     <div class="container">
       <div id="root"></div>
       <div class="sidebar">
