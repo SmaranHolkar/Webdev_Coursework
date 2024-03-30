@@ -6,6 +6,12 @@
   <title>Feedback</title>
   <link rel="icon" type="image/x-icon" href="images/logo.png">
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    h1 {
+      font-size: xx-large;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
@@ -22,6 +28,64 @@
       </ul>
     </nav>
   </header>
+
+  <main>
+    <h1>Feedback Form</h1>
+    <form>
+
+      <fieldset id="userinfo">
+        <legend>Personal Details</legend>
+
+        <label for="firstname">First name: </label>
+        <input type="text" name="firstname" id="firstname" size="20" placeholder="Enter your first name" required>
+        <br>
+        <label for="surname">Surname: </label>
+        <input type="text" name="surname" id="surname" size="20" placeholder="Enter your surname" required>
+        <br>
+        <label for="email">Email address: </label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+
+      </fieldset>
+
+      <fieldset id="usercomments">
+        <legend>Rating</legend>
+        Rating:<br>
+        <input type="radio" id="rating1" name="rating" value="1">
+        <label for="rating1">1 - Poor</label><br>
+
+        <input type="radio" id="rating2" name="rating" value="2">
+        <label for="rating2">2 - Fair</label><br>
+
+        <input type="radio" id="rating3" name="rating" value="3">
+        <label for="rating3">3 - Average</label><br>
+
+        <input type="radio" id="rating4" name="rating" value="4">
+        <label for="rating4">4 - Good</label><br>
+
+        <input type="radio" id="rating5" name="rating" value="5">
+        <label for="rating5">5 - Excellent</label><br>
+
+        <label for="breakfast">Breakfast:</label>
+        <select name="breakfast" id="breakfast">
+          <option value="yes">Include</option>
+          <option value="no">Not Include</option>
+        </select>
+        <br>
+        <label for="requirements">Special Requirements: </label>
+        <textarea name="requirements" id="requirements" rows="5" cols="20">Please provide any special requirements
+            </textarea>
+      </fieldset>
+
+      <fieldset id="filed3">
+        <input type="submit" name="button" value="Send" class="rounded-button">
+        <input type="reset" name="button" value="Reset" class="rounded-button">
+
+      </fieldset>
+  </main>
+
+  <script>
+
+  </script>
 </body>
 
 </html>
