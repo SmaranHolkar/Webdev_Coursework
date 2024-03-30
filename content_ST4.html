@@ -7,33 +7,35 @@
     <link rel="stylesheet" href="styles.css">
 
     <style>
+
 .container {
   display: flex;
   flex-wrap: wrap; /* Allows content to wrap if needed */
-  width: 80%; /* Adjust width as needed */
-  margin: 5px auto; /* Center the container horizontally */
+  width: 90%; /* Adjust width as needed */
+  margin: 10px auto; /* Center the container horizontally */
 }
 
 .image-text-pair {
   display: flex; /* Make elements side-by-side */
-  width: 90%; /* Each pair takes full width */
+  width: 100%; /* Each pair takes full width */
   margin-bottom: 1rem; /* Add space between pairs */
 }
 
 .image {
-  width: 50%; /* Adjust image width as needed */
+  width: 25%; /* Adjust image width as needed */
   object-fit: cover; /* Scales image to fill container while maintaining aspect ratio */
 }
 
 .text-content {
-  width: 50%; /* Adjust text content width as needed */
+  width: 100%; /* Adjust text content width as needed */
   padding: 1rem; /* Add some padding for better readability */
 }
 
 h2 {
-  margin-bottom: 1rem; /* Add space between headline and text */
+  text-decoration:underline;
 }
     </style>
+
 
 </head>
 <body>
@@ -61,30 +63,35 @@ h2 {
     </div>
 
     <div class="container">
-        <div class="image-text-pair">
-          <img src="./images/naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg" alt="Image description 1" class="image">
-          <div class="text-content">
-            <h2>How plastic affects sealife?</h2>
-            <p>Sealife does get affected by plastic in the ocean. Firstly they can get tangled in plastic and may die due to othe sealife. They may die to to choking on the plastic.</p>
-          </div>
-        </div>
-        <div class="image-text-pair flipped">
+          <div class="image-text-pair">
+            <img src="./images/naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg" alt="Image description 1" class="image">
             <div class="text-content">
-                <h2>Oceancleanup</h2>
-                <p>The ocean cleanup are using huge boats and nets to collect plastic from oceans and rivers.</p>
-                <a href="https://theoceancleanup.com/oceans/" target="_blank">More info click here</a>
+              <h2>How plastic affects sealife?</h2>
+              <p>Sealife does get affected by plastic in the ocean. Firstly they can get tangled in plastic and may die due to othe sealife. They may die to to choking on the plastic.</p>
+              <p><q>Plastic waste can encourage the growth of pathogens in the ocean. According to a recent study, scientists concluded that corals that come into contact with plastic have an 89 percent chance of contracting disease, compared with a 4 percent likelihood for corals that do not.</q>( <a href="https://www.pewtrusts.org/en/research-and-analysis/articles/2018/09/24/plastic-pollution-affects-sea-life-throughout-the-ocean#:~:text=It%20is%20estimated%20that%20up,suffocation%2C%20starvation%2C%20and%20drowning.">source.</a> )</p>
             </div>
-            <img src="./images/Medium-230918_System03_Trip1_extraction_S1H_pic_55.jpg.webp" alt="Image description 2" class="image">
-        </div>
-        <div class="image-text-pair">
-          <img src="./images/ocg-saving-the-ocean-EPPS6W5LdXs-unsplash.jpg" alt="Image description 1" class="image">
-          <div class="text-content">
-            <h2>How to help?</h2>
-            <p>Helping clean beaches and rivers can help ecosystems flourish again. Start of small by using whatever you can to pick up plastic from beaches.</p>
-            <p>Use biodegradable or reuable products, such as, bottles, spoons, straws.</p>
-            <a href="https://www.mossy.earth/guides/waste/beach-clean" target="_blank">For ore info click here.</a>
           </div>
-        </div>
+
+          <!-- second paragraph  -->
+          <div class="image-text-pair flipped">
+              <div class="text-content">
+                  <h2>Oceancleanup</h2>
+                  <p>The ocean cleanup are using huge boats and nets to collect plastic from oceans and rivers. Despite encountering some mishaps and criticism regarding its efficacy, environmental effects, and the transparency between its operations , The Ocean Cleanup organization is dedicated to combating ocean plastic pollution on a global scale. The organization continues to develop technology to tackle this critical environmental concern.</p>
+                  <a href="https://theoceancleanup.com/oceans/" target="_blank">More info click here</a>
+              </div>
+              <img src="./images/Medium-230918_System03_Trip1_extraction_S1H_pic_55.jpg.webp" alt="Image description 2" class="image">
+          </div>
+
+          <!-- third paragraph -->
+          <div class="image-text-pair">
+            <img src="./images/ocg-saving-the-ocean-EPPS6W5LdXs-unsplash.jpg" alt="Image description 1" class="image">
+            <div class="text-content">
+              <h2>How to help?</h2>
+              <p>Helping clean beaches and rivers can help ecosystems flourish again. Start of small by using whatever you can to pick up plastic from beaches.</p>
+              <p>Use biodegradable or reuable products, such as, bottles, spoons, straws. As biodegradable products can break over down quicker than regular plastic products, it will not make a negative impact on sealife.</p>
+              <a href="https://www.mossy.earth/guides/waste/beach-clean" target="_blank">For ore info click here.</a>
+            </div>
+          </div>
 
       </div>
 
