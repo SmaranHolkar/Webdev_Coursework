@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 
     <style>
-    .sitemap svg {
-      width: 100%;
+
+    .sitemap{
+        width: 100%;
+        
     }
 
     /* rectangle turns blue when you hover over it */
@@ -26,10 +28,10 @@
         <nav>
           <ul>
             <li><a href="">Home</a></li>
-            <li><a class="active" href="">Gallery</a></li>
+            <li><a href="">Gallery</a></li>
             <li><a href="">Shop</a></li>
             <li><a href="">Profile</a></li>
-            <li><a href="">Site Map</a></li>
+            <li><a class="active" href="">Site Map</a></li>
             <li class="right"><a href="">Feedback</a></li>
           </ul>
         </nav>
@@ -44,9 +46,9 @@
         <svg class="sitemap-svg" height="700" width="1000" >
             <!-- Splash Screen -->
             <g class="rect" id="splashScreen">
-                <rect x="15" y="30" height="50" width="150" 
+                <rect x="270" y="30" height="50" width="150" 
                     stroke="purple" fill="none" stroke-width="2" />
-                <text fill="#000" font-size="14" x="90" y="60"
+                <text fill="#000" font-size="14" x="350" y="60"
                     text-anchor="middle">
                     Splash Screen
                 </text>
@@ -54,9 +56,9 @@
             <!-- Home Page -->
             <g class="rect" id="homePage">
                 <a href="splash.html">
-                    <rect x="15" y="130" height="50" width="150" 
+                    <rect x="270" y="130" height="50" width="150" 
                         stroke="purple" fill="none" stroke-width="2" />
-                    <text fill="#000" font-size="14" x="90" y="160"
+                    <text fill="#000" font-size="14" x="345" y="160"
                         text-anchor="middle">
                         Home Page
                     </text>
@@ -64,36 +66,101 @@
             </g>
             <!-- Connecting Lines -->
             <line id="connect1" stroke="purple" stroke-width="2" 
-                x1="90" y1="80" x2="90" y2="130"></line>
+                x1="340" y1="80" x2="340" y2="130"></line>
             <line id="connect2" stroke="purple" stroke-width="2" 
-                x1="90" y1="180" x2="90" y2="230"></line>
+                x1="340" y1="180" x2="340" y2="255"></line>
+            <line id="connect3" stroke="purple" stroke-width="2" 
+                x1="180" y1="250" x2="165" y2="250"></line>
             <line id="connect3" stroke="purple" stroke-width="2" 
                 x1="90" y1="280" x2="90" y2="330"></line>
+            <line id="connect4" stroke="purple" stroke-width="2" 
+                x1="90" y1="280" x2="90" y2="330"></line>
+            <line id="connect5" stroke="purple" stroke-width="2" 
+                x1="90" y1="280" x2="90" y2="330"></line>
             <!-- Navbar -->
+            <g class="rect" id="navbar">
+                <a href="navbar.html">
+                    <rect x="180" y="230" height="50" width="150" 
+                        stroke="purple" fill="none" stroke-width="2" />
+                    <text fill="#000" font-size="14" x="250" y="260"
+                        font-family="Arial" text-anchor="middle">
+                        Content
+                    </text>
+                </a>
+            </g>
+            <g class="rect" id="navbar">
+                <a href="navbar.html">
+                    <rect x="350" y="230" height="50" width="150" 
+                        stroke="purple" fill="none" stroke-width="2" />
+                    <text fill="#000" font-size="14" x="425" y="260"
+                        font-family="Arial" text-anchor="middle">
+                        feedback
+                    </text>
+                </a>
+            </g>
+            <g class="rect" id="navbar">
+                <a href="navbar.html">
+                    <rect x="520" y="230" height="50" width="150" 
+                        stroke="purple" fill="none" stroke-width="2" />
+                    <text fill="#000" font-size="14" x="590" y="260"
+                        font-family="Arial" text-anchor="middle">
+                        Gallery
+                    </text>
+                </a>
+            </g>
+            <g class="rect" id="navbar">
+                <a href="navbar.html">
+                    <rect x="15" y="330" height="50" width="150" 
+                        stroke="purple" fill="none" stroke-width="2" />
+                    <text fill="#000" font-size="14" x="90" y="360"
+                        font-family="Arial" text-anchor="middle">
+                        Page Editor
+                    </text>
+                </a>
+            </g>
+            <g class="rect" id="navbar">
+                <a href="navbar.html">
+                    <rect x="180" y="330" height="50" width="150" 
+                        stroke="purple" fill="none" stroke-width="2" />
+                    <text fill="#000" font-size="14" x="250" y="360"
+                        font-family="Arial" text-anchor="middle">
+                        Profile
+                    </text>
+                </a>
+            </g>
+            <g class="rect" id="navbar">
+                <a href="navbar.html">
+                    <rect x="350" y="330" height="50" width="150" 
+                        stroke="purple" fill="none" stroke-width="2" />
+                    <text fill="#000" font-size="14" x="425" y="360"
+                        font-family="Arial" text-anchor="middle">
+                        Shop
+                    </text>
+                </a>
+            </g>
+            <g class="rect" id="navbar">
+                <a href="navbar.html">
+                    <rect x="520" y="330" height="50" width="150" 
+                        stroke="purple" fill="none" stroke-width="2" />
+                    <text fill="#000" font-size="14" x="590" y="360"
+                        font-family="Arial" text-anchor="middle">
+                        Sitemap
+                    </text>
+                </a>
+            </g>
             <g class="rect" id="navbar">
                 <a href="navbar.html">
                     <rect x="15" y="230" height="50" width="150" 
                         stroke="purple" fill="none" stroke-width="2" />
                     <text fill="#000" font-size="14" x="90" y="260"
                         font-family="Arial" text-anchor="middle">
-                        Navbar
+                        team
                     </text>
                 </a>
             </g>
-        <!-- Node 3 -->
-                    <g class="rect" id="node3">
-            <a href="node3.html">
-                <rect x="200" y="230" height="50" width="150" 
-                    stroke="purple" fill="none" stroke-width="2" />
-                <text fill="#000" font-size="14" x="275" y="260"
-                    text-anchor="middle">
-                    
-                </text>
-            </a>
-            <!-- Connecting line to Home Page -->
-            <line id="connect3" stroke="purple" stroke-width="2" 
-                x1="90" y1="155" x2="600" y2="55"></line>
-        </g>
+            
+        
+
 
 
     </svg>
