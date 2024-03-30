@@ -177,6 +177,60 @@ button:hover{
   cursor: pointer;
   color: #333333;
 }
+
+#hiddenSection {
+    display: none;
+  }
+
+  .checkout-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.checkout-header {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.checkout-info {
+    width: 50%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.checkout-info label {
+    font-weight: bold;
+}
+
+.checkout-info input[type="text"],
+.checkout-info input[type="email"],
+.checkout-info input[type="tel"],
+.checkout-info input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkout-info button {
+    padding: 10px 20px;
+    background-color: lightblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.checkout-info button:hover {
+    background-color: #333;
+}
+    
     
 </style>
 <body>
@@ -196,7 +250,7 @@ button:hover{
   </header>
 
         <div class="header">
-            <h1>Welcome to our Shop</h1>
+            <h1>Welcome to Shop</h1>
             <div class="cart"> <img src="images/Cart.jpg" alt="Cart" width="auto" height="29"><p id="count">0</p></div>
         </div>
     <div class="container">
@@ -209,117 +263,170 @@ button:hover{
                 <h2 id="total">£0.00</h2>
             </div>
 
-            <button><a href="CheckoutPage.html" class="checkout-button">Checkout</a></button>
+            <div class="checkout-button">
+                <button onclick="checkout()">Checkout</button>
             </div>
+             
+            </div>
+        </div>
+
+       <section id="hiddenSection">
+        <div class="checkout-container">
+            <h2 class="checkout-header">Checkout</h2>
+            <div class="checkout-info">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
+    
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address">
+    
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+    
+                <label for="cardnumber">Card Number</label>
+                <input type="number" id="cardnumber" name="cardnumber" placeholder="Enter your card number">
+    
+                <label for="expirydate">Expiry Date</label>
+                <input type="text" id="expirydate" name="expirydate" placeholder="MM/YYYY">
+    
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="Enter CVV">
+    
+                <label for="address">Billing Address</label>
+                <input type="text" id="address" name="address" placeholder="Enter your billing address">
+    
+                <button onclick="completeOrder()">Complete Order</button>
+            </div>
+        </section>
         </div>
     
     <script>
-    const product = [
-    {
-  id: 0,
-    images: 'images/T-Shirt.jpg',
-    title: 'T-Shirt',
-    description: 'These shirts are made from recycled bottles',
-    price: 40,
-},
-{
-    id: 1,
-    images: 'images/Shorts.jpg',
-    title: 'Shorts',
-    description: 'These shorts made from recycled fishing nets',
-    price: 25,
-},
-{
-    id: 2,
-    images: 'images/Sunglasses.jpg',
-    title: 'Sunglasses',
-    description:'These sunglasses made of 100% recycled plastic',
-    price: 75,
-},
-{
-    id: 3,
-    images: 'images/Frisbee.jpg',
-    title: 'Frisbee',
-    description: 'These frisbees are made from 100% recyled fishing nets',
-    price: 60,
-},
-{
-    id: 4,
-    images: 'images/Suitcase.jpg',
-    title: 'Suitcase',
-    description: 'These suitcases are made from recycled plastic bottles',
-    price: 210,
-},
-{
-    id: 5,
-    images: 'images/Travelbag.jpg',
-    title: 'Travel bag',
-    description: 'These travel bags are made from 100% recycled materials',
-    price: 180,
-}
-];
+      const product = [
+        {
+          id: 0,
+          images: 'images/T-Shirt.jpg',
+          title: 'T-Shirt',
+          description: 'These shirts are made from recycled bottles',
+          price: 40,
+        },
+        {
+          id: 1,
+          images: 'images/Shorts.jpg',
+          title: 'Shorts',
+          description: 'These shorts made from recycled fishing nets',
+          price: 25,
+        },
+        {
+          id: 2,
+          images: 'images/Sunglasses.jpg',
+          title: 'Sunglasses',
+          description: 'These sunglasses made of 100% recycled plastic',
+          price: 75,
+        },
+        {
+          id: 3,
+          images: 'images/Frisbee.jpg',
+          title: 'Frisbee',
+          description: 'These frisbees are made from 100% recyled fishing nets',
+          price: 60,
+        },
+        {
+          id: 4,
+          images: 'images/Suitcase.jpg',
+          title: 'Suitcase',
+          description: 'These suitcases are made from recycled plastic bottles',
+          price: 210,
+        },
+        {
+          id: 5,
+          images: 'images/Travelbag.jpg',
+          title: 'Travel bag',
+          description: 'These travel bags are made from 100% recycled materials',
+          price: 180,
+        }
+      ];
 
-const categories = [...new Set(product.map((item)=>
-{return item}))]
-let i=0;
-document.getElementById('root').innerHTML = product.map((item)=>
-{
-var {images, title,  description, price} = item;
-return(
-    `<div class='box'>
-        <div class='img-box'>
-            <img class='images' src=${images}></img>
-        </div>
-    <div class='bottom'>
-    <h3>${title}</h3>
-    <p>${description}<p>
-    <h2>£ ${price}.00</h2>`+
-    "<button onclick='addtocart("+(i++)+")'>Add to cart</button>"+
-    `</div>
-    </div>`
-)
-}).join('')
-
-var cart =[];
-
-function addtocart(a){
-cart.push({...product[a]});
-displayCart();
-}
-function delElement(a){
-cp.splice(a, 1);
-displayCart();
-}
-
-function displayCart(){
-let j = 0, total=0;
-document.getElementById("count").innerHTML=cart.length;
-if(cart.length==0){
-    document.getElementById('cartProduct').innerHTML = "Your cart is empty";
-    document.getElementById("total").innerHTML = "£ "+0+".00";
-}
-else{
-    document.getElementById("cartProduct").innerHTML = cart.map((items)=>
-    {
-        var {images, title, price} = items;
-        total=total+price;
-        document.getElementById("total").innerHTML = "£ "+total+".00";
-        return(
-            `<div class='cart-item'>
-            <div class='row-img'>
-                <img class='rimg' src=${images}>
+      const categories = [...new Set(product.map((item) => { return item }))]
+      let i = 0;
+      document.getElementById('root').innerHTML = product.map((item) => {
+        var { images, title, description, price } = item;
+        return (
+          `<div class='box'>
+            <div class='img-box'>
+                <img class='images' src=${images}></img>
             </div>
-            <p style='font-size:12px;'>${title}</p>
-            <h2 style='font-size: 15px;'>£ ${price}.00</h2>`+
-            "<i class='fa-solid fa-trash' onclick='delElement("+ (j++) +")'></i></div>"
-        );
-    }).join('');
-}
+        <body class='bottom'>
+        <h3>${title}</h3>
+        <div>${description}<p>
+        <h2>£ ${price}.00</h2>` +
+          "<button onclick='addtocart(" + (i++) + ")'>Add to cart</button>" +
+          `</div>
+        </div>`
+        )
+      }).join('')
 
-}
+      var cart = [];
 
-    
-</script>
+      function addtocart(a) {
+        cart.push({ ...product[a] });
+        displayCart();
+      }
+      function delElement(a) {
+        cp.splice(a, 1);
+        displayCart();
+      }
+
+      function displayCart() {
+        let j = 0, total = 0;
+        document.getElementById("count").innerHTML = cart.length;
+        if (cart.length == 0) {
+          document.getElementById('cartProduct').innerHTML = "Your cart is empty";
+          document.getElementById("total").innerHTML = "£ " + 0 + ".00";
+        }
+        else {
+          document.getElementById("cartProduct").innerHTML = cart.map((items) => {
+            var { images, title, price } = items;
+            total = total + price;
+            document.getElementById("total").innerHTML = "£ " + total + ".00";
+            return (
+              `<div class='cart-item'>
+                <div class='row-img'>
+                    <img class='rimg' src=${images}>
+                </div>
+                <p style='font-size:12px;'>${title}</p>
+                <h2 style='font-size: 15px;'>£ ${price}.00</h2>` +
+              "<i class='fa-solid fa-trash' onclick='delElement(" + (j++) + ")'></i></div>"
+            );
+          }).join('');
+        }
+
+      }
+
+      function checkout() {
+        var section = document.getElementById("hiddenSection");
+        if (section.style.display === "none") {
+          section.style.display = "block";
+        } else {
+          section.style.display = "none";
+        }
+      }
+
+      function completeOrder() {
+        const fullName = document.getElementById("fullname").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+
+        if (!fullName || !email || !phone) {
+          alert("Please fill in all the sections!");
+          return;
+        }
+        alert("Thank you for your order! We will contact you shortly.");
+
+      }
+
+
+
+    </script>
     
 </body>
 </html>

@@ -1,12 +1,17 @@
+/* Sets the Font for all the webpages */
 html {
   font-family: 'Open Sans', sans-serif
 }
 
+/* Removes the margins and sets the background colour */
 body {
   margin: 0;
   background-color: #ffffff;
 }
 
+/* 
+The nav bar header
+Setting how the content will be layed out in the header */
 header {
   display: flex;
   position: relative;
@@ -19,35 +24,54 @@ header {
   border-bottom: solid 2px whitesmoke;
 }
 
+/* 
+Removes the unordered list styles */
 header ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
+/* 
+Making the list elemnts all inline */
 header li {
   display: inline;
 }
 
+/* 
+Giving the link its look
+Making text colour white
+Text Centerd
+Margin to left at 10 pixels
+Padding  */
 header a {
   color: white;
   text-align: center;
   text-decoration: none;
   margin-left: 10px;
-  padding: 1rem;
+  padding: 16px;
   border-radius: 5px;
 }
 
+/* 
+When a link is currently open, it will have a unique look
+Different background colour
+Adding dotted underline */
 header a.active {
   background-color: #2d5e99;
   text-decoration: underline dotted;
   text-underline-offset: 5px;
 }
 
+/* 
+When the link is hover and isn't the active site
+Only the background will change */
 header a:hover:not(.active) {
   background-color: #2d5e99;
 }
 
+/*  
+Header 1 having a background */
 h1 {
   background-image: url("./images/wexor-tmg-L-2p8fapOA8-unsplash.jpg");
   padding: 10px;
@@ -56,42 +80,27 @@ h1 {
   margin: 0;
 }
 
+/* 
+Shiting the last element in the list the right of the screen */
 .right {
   position: absolute;
   right: 30px;
 }
 
+/* 
+The logo size and its position */
 .logo {
   width: 50px;
-  font-size: 1.5rem;
+  font-size: x-large;
   border-radius: 5px;
   margin-left: 10px;
 }
 
-.card {
-  text-decoration: none;
-  width: 1100px;
-  height: fit-content;
-  background-color: #2d5e99;
-  border: 2px solid #4e9aff;
-  border-radius: 10px;
-  align-items: center;
-  display: flex;
-  color: white;
-  padding: 20px;
-}
-
-.card:hover {
-  background-color: #418ce7;
-}
-
+/* 
+Background class to use for the background */
 .background-im {
   background-image: url("./images/home/naja-bertolt-jensen-Uu1CtKngEXY-unsplash.jpg");
   background-size: cover;
   background-position: center;
   background-color: aquamarine;
-}
-
-content_box{
-
 }

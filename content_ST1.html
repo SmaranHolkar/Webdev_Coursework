@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Content Page Student 1</title>
     <link rel="stylesheet" href="styles.css">
 
     <style>
@@ -21,7 +21,7 @@
 }
 
 .image {
-  width: 50%; /* Adjust image width as needed */
+  width: 30%; /* Adjust image width as needed */
   object-fit: cover; /* Scales image to fill container while maintaining aspect ratio */
 }
 
@@ -32,48 +32,69 @@
 
 h2 {
   margin-bottom: 1rem; /* Add space between headline and text */
+  text-decoration: underline;
 }
     </style>
 
 </head>
 <body>
 
-    <header>
-        <img class="logo" src="./images/logo.png" alt="logo" width="50 ">
-        <nav>
-          <ul>
-            <li><a href="">Home</a></li>
-            <li><a class="active" href="">Gallery</a></li>
-            <li><a href="">Shop</a></li>
-            <li><a href="">Profile</a></li>
-            <li><a href="">Site Map</a></li>
-            <li class="right"><a href="">Feedback</a></li>
-          </ul>
-        </nav>
-    </header>
+    <!-- Navigation bar -->
+  <header>
+    <!-- Logo -->
+    <img class="logo" src="/images/logo.png" alt="logo">
+    <nav>
+      <!-- List of all the main links
+      Any class with active, will have a unique look and is depended on what page the user is on -->
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="sitemap.html">Site Map</a></li>
+        <li class="right"><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
 
     <div class="banner">
-        <h1>Content Student 4. Cleaning ocean for sealife</h1>
+        <h1>Content Student 1. Life Below Ocean</h1>
     </div>
 
     <div class="container">
         <div class="image-text-pair">
-          <img src="./images/naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg" alt="Image description 1" class="image">
+          <img src="./images/Ocean.jpg" alt="Ocean" class="image">
           <div class="text-content">
-            <h2>How plastic affects sealife?</h2>
-            <p>Sealife does get affected by plastic in the ocean. Firstly they can get tangled in plastic and may die due to othe sealife. They may die to to choking on the plastic.</p>
+            <h2>Introduction to the Ocean</h2>
+            <p>The ocean, covering over 70% of the Earth's surface, stands as a testament to the planet's stunning diversity. Its vastness extends across millions of square miles, from the sunlit shallows to the dark depths of the abyss. </p>
           </div>
         </div>
         <div class="image-text-pair flipped">
           <div class="text-content">
-            <h2>Oceancleanup</h2>
-            <p>The ocean cleanup are using huge boats and nets to collect plastic from oceans and rivers.</p>
-            <p>The ocean cleanup are using huge boats and nets to collect plastic from oceans and rivers.</p>
+            <h2>Importance of the Ocean</h2>
+            <p>The ocean serves as the lifeblood of our planet, providing essential resources and regulating Earth's climate. It produces over half of the oxygen we breathe, the ocean plays a crucial role in regulating the global climate by absorbing heat and distributing it across the planet through ocean currents.</p>
           </div>
-          <img src="./images/Medium-230918_System03_Trip1_extraction_S1H_pic_55.jpg.webp" alt="Image description 2" class="image">
+          <img src="./images/Ocean2.jpg" alt="Ocean Importance" class="image">
         </div>
       </div>
-
+        <div class="image-text-pair">
+            <img src="images/help-ocean.jpg" alt="Ocean maintainance" class="image">
+            <div class="text-content">
+                <h2>How to maintain the Ocean</h2>
+                <p>Maintaining the ocean in a sustainable and healthy manner requires a concerted effort from individuals, communities, governments, and organizations worldwide. Here are some key ways to ensure the ocean's well-being:<br>
+                <b>Reduce Pollution: Properly dispose of trash and plastic waste to prevent them from entering waterways and ultimately reaching the ocean.</b> <br>
+                <b>Combat Climate Change: Reduce carbon emissions by using renewable energy sources and promoting energy efficiency.</b> <br>
+                <b>Collaborate and Educate: Promote environmental education and awareness initiatives to inspire stewardship and instill a sense of responsibility towards the ocean among people of all ages.</b> </p>
+            </div>
+        </div>
+        <div class="image-text-pair flipped">
+            <div class="text-content">
+              <h2>Why is it bad if the Ocean is not treated well</h2>
+              <p>Failing to treat the ocean well can have significant and far-reaching consequences for both marine ecosystems and human well-being. Additionally, ocean pollution contributes to climate change and poses risks to human health through contaminated seafood and polluted coastal waters. To protect these ecosystems, ocean pollution must be solved via efficient waste management, sustainable practices, and international collaboration. </p>
+            </div>
+            <img src="./images/Ocean-Crisis.jpg" alt="Ocean Crisis" class="image">
+          </div>
+        </div>
 
 </body>
 </html>
