@@ -3,29 +3,208 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Page Editor</title>
+  <title>Page Editor Endrit</title>
   <link rel="icon" type="image/x-icon" href="images/logo.png">
   <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <style>
+    html {
+      text-align: center;
+    }
+
+    td,
+    th {
+      border: 1px black solid;
+      padding: 10px;
+      font-size: larger;
+      border-radius: 10px;
+      color: white;
+    }
+
+    th {
+      background-color: #2d5e99;
+    }
+
+    td {
+      background-color: #418ce7;
+    }
+
+    table {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h3 {
+      font-size: larger;
+      text-decoration: underline 1px;
+    }
+
+    hr {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border: 1px black solid;
+    }
+
+    .title,
+    .web-table {
+      padding: 15px;
+    }
+
+    .me,
+    .web-section {
+      background-color: #418ce7;
+      color: white;
+      padding: 15px;
+    }
+
+
+    .section {
+      width: 600px;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .page-editor {
+      margin-bottom: 40px;
+    }
+  </style>
 </head>
 
 <body>
   <!-- Navigation bar -->
   <header>
     <!-- Logo -->
-    <img class="logo" src="/images/logo.png" alt="logo">
+    <img class="logo" src="./images/logo.png" alt="logo">
     <nav>
       <!-- List of all the main links
       Any class with active, will have a unique look and is depended on what page the user is on -->
       <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="sitemap.html">Site Map</a></li>
-        <li class="right"><a href="feedback.html">Feedback</a></li>
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/shop.html">Shop</a></li>
+        <li><a href="/profile.html">Profile</a></li>
+        <li><a href="/sitemap.html">Site Map</a></li>
+        <li class="right"><a href="./feedback.html">Feedback</a></li>
       </ul>
     </nav>
   </header>
+
+  <!-- The main Page editor -->
+  <div class="page-editor">
+    <!-- Title of the page -->
+    <div class="title">
+      <h2>Page Editor</h2>
+    </div>
+
+    <!-- lines to split the page in segments -->
+    <hr>
+
+    <!-- My information -->
+    <div class="me">
+      <p>
+        Name: Endrit Brahimi<br>
+        Role: Student 2<br>
+        Student ID: w2044456<br>
+      </p>
+    </div>
+
+    <hr>
+
+    <!-- Table of website I have made 
+    Links to the websites and also to teh little paragrahs for them-->
+    <div class="web-table">
+      <table>
+        <tr>
+          <th>Webpages</th>
+          <th>Compeleted</th>
+        </tr>
+
+        <tr>
+          <td><a href="./home.html">Home</a></td>
+          <td><a href="#homepage">Yes</a></td>
+        </tr>
+
+        <tr>
+          <td><a href="./feedback.html">Feedback</a></td>
+          <td><a href="#feedbackpage">Yes</a></td>
+        </tr>
+
+        <tr>
+          <td><a href="./content_ST2.html">Content Page</a></td>
+          <td><a href="#contentpage">Yes</a></td>
+        </tr>
+
+        <tr>
+          <td><a href="./pageEditor_ST2.html">Page Editor</a></td>
+          <td><a href="#pageeditor">Yes</a></td>
+        </tr>
+      </table>
+    </div>
+
+    <hr>
+
+    <!-- Little paragraphs on each of the websites I made, adding links at the end-->
+    <div class="web-section">
+      <div class="section">
+        <h3 id="homepage">Home Page</h3>
+        <p>
+          This is the main screen that will be shown after the main page.
+          I made the navigation bar, this displays the main logo of the website and 6 links (Home, Gallery, Shop,
+          Profile, Site Map and Feedback).
+          This will then send the user the the respected loaction.
+          For the Home screen, there are going to be link cards giving you information to websites.
+          These cards will talk and describe the about the specific Page.
+          Then at the bottom of the page, there will be cards that will send the user to the specific students content
+          page.
+        </p>
+
+        <a href="/home.html">View more here</a>
+      </div>
+
+      <div class="section">
+        <h3 id="feedbackpage">Feedback Page</h3>
+        <p>
+          This is the feedback page, where a form ask the user input for the website.
+          It will ask for their name, surname and their email.
+          For the email, there will be a checker if the input is a valid email.
+          There will also the a rating section, where the user picks a rating from 1 to 5.
+          And there will be a section where the user can add extra information for comments / feedback.
+          The form will tell the user if any required fields are empty (Name, Surename, Email and Rating)
+        </p>
+        <a href="/feedback.html">View more here</a>
+      </div>
+
+      <div class="section">
+        <h3 id="contentpage">Content Page</h3>
+        <p>
+          This is the content page.
+          This is where I talk about Life below water, and how we can make a positive impact.
+          Helping the oceans, improving how we intract with the ocean.
+        </p>
+        <a href="/content_ST2.html">View more here</a>
+      </div>
+
+      <div class="section">
+        <h3 id="pageeditor">Page Editor</h3>
+        <p>
+          This is the page edito, where I describe and show off what website I have made.
+          This is will be linked to all my pages at the footer.
+        </p>
+        <a href="/pageEditor_ST2.html">View more here</a>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>

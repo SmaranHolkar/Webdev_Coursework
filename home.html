@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Home Page</title>
-  <link rel="icon" type="image/x-icon" href="images/logo.png">
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="./images/logo.png">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
 
   <style>
     /* 
@@ -34,6 +34,28 @@
     }
 
     /* 
+    Adding the Page Editor to this Page */
+    footer{
+      background-color: #4e9aff;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-top: solid 2px whitesmoke;
+    }
+
+    /* 
+    Setting the link Colour */
+    footer a{
+      color: #ffffff;
+    }
+
+    /* 
+    To indicate that the user to hovering over a link */
+    footer a:hover{
+      text-decoration: underline;
+    }
+
+    /* 
     Main div to contain all the link cards
     Makes the cards stack on top of each other having a small gap inbetween */
     .container {
@@ -55,6 +77,7 @@
       height: fit-content;
       background-color: #2d5e99;
       border: 2px solid #4e9aff;
+      border-radius: 10px;
       display: flex;
       color: white;
       padding: 20px;
@@ -115,16 +138,26 @@
     }
 
     /* 
-    Makes the card width smaller to 500px */
-    #content-card {
+    Makes the card width smaller to 500px
+    And font bigger
+    Either than that its the same as the card */
+    .content-card {
       width: 500px;
+      text-decoration: none;
+      height: fit-content;
+      background-color: #2d5e99;
+      border: 2px solid #4e9aff;
+      border-radius: 10px;
+      display: flex;
+      color: white;
+      padding: 20px;
+      font-size: large;
     }
 
     /* 
-    The content cards removes the padding and makes the text larger */
-    #content-text {
-      padding: 0;
-      font-size: large;
+    When the card is hover the background changes */
+    .content-card:hover {
+      background-color: #418ce7;
     }
   </style>
 
@@ -135,17 +168,17 @@
   <!-- Navigation bar -->
   <header>
     <!-- Logo -->
-    <img class="logo" src="/images/logo.png" alt="logo">
+    <img class="logo" src="./images/logo.png" alt="logo">
     <nav>
       <!-- List of all the main links
       Any class with active, will have a unique look and is depended on what page the user is on -->
       <ul>
-        <li><a class="active" href="home.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="sitemap.html">Site Map</a></li>
-        <li class="right"><a href="feedback.html">Feedback</a></li>
+        <li><a class="active" href="./home.html">Home</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/shop.html">Shop</a></li>
+        <li><a href="/profile.html">Profile</a></li>
+        <li><a href="/sitemap.html">Site Map</a></li>
+        <li class="right"><a href="./feedback.html">Feedback</a></li>
       </ul>
     </nav>
   </header>
@@ -161,7 +194,7 @@
       In the card there will 2 div's one for the image and the text  -->
 
       <!-- Link Card for Gallery -->
-      <a href="gallery.html" class="card">
+      <a href="/gallery.html" class="card">
         <div>
           <img class="card-icon" src="./images/home/gallery.png" alt="gallery">
         </div>
@@ -178,7 +211,7 @@
       </a>
 
       <!-- Link Card for Shop -->
-      <a href="shop.html" class="card">
+      <a href="/shop.html" class="card">
         <div>
           <img class="card-icon" src="./images/home/shop.png" alt="shop">
         </div>
@@ -195,7 +228,7 @@
       </a>
 
       <!-- Link Card for Profile -->
-      <a href="profile.html" class="card">
+      <a href="/profile.html" class="card">
         <div>
           <img class="card-icon" src="./images/home/profile.png" alt="profile">
         </div>
@@ -210,9 +243,9 @@
       </a>
 
       <!-- Link Card for Sitemap -->
-      <a href="sitemap.html" class="card">
+      <a href="/sitemap.html" class="card">
         <div>
-          <img class="card-icon" src="images/home/sitemap.png" alt="logo">
+          <img class="card-icon" src="./images/home/sitemap.png" alt="logo">
         </div>
         <div class="card-text">
           <h2>Site Map</h2>
@@ -230,36 +263,36 @@
       <!-- Each link will have 1 div just for teh text -->
 
       <!-- Link Card for Student 1's content -->
-      <a href="content_ST1.html" class="card" id="content-card">
+      <a href="/content_ST1.html" class="content-card">
         <div class="card-text">
-          <p class="card-paragraph" id="content-text">
+          <p>
             View Student 1's Content
           </p>
         </div>
       </a>
 
       <!-- Link Card for Student 2's content -->
-      <a href="content_ST2.html" class="card" id="content-card">
+      <a href="./content_ST2.html" class="content-card">
         <div class="card-text">
-          <p class="card-paragraph" id="content-text">
+          <p>
             View Student 2's Content
           </p>
         </div>
       </a>
 
       <!-- Link Card for Student 3's content -->
-      <a href="content_ST3.html" class="card" id="content-card">
+      <a href="/content_ST3.html" class="content-card">
         <div class="card-text">
-          <p class="card-paragraph" id="content-text">
+          <p>
             View Student 3's Content
           </p>
         </div>
       </a>
 
       <!-- Link Card for Student 4's content -->
-      <a href="content_ST4.html" class="card" id="content-card">
+      <a href="/content_ST4.html" class="content-card">
         <div class="card-text">
-          <p class="card-paragraph" id="content-text">
+          <p>
             View Student 4's Content
           </p>
         </div>
@@ -275,6 +308,12 @@
         target="_blank">Unsplash</a>
     </div>
   </main>
+
+  <!-- Footer for the Page Editor -->
+  <footer>
+    <!-- Link for the page editor -->
+    <a href="./pageEditor_ST2.html">Page Editor</a>
+  </footer>
 </body>
 
 </html>

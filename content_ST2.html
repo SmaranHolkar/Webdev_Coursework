@@ -4,49 +4,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Content Page Endrit</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <link rel="icon" type="image/x-icon" href="./images/logo.png">
 
   <style>
-    .container {
+    h1 {
+      text-align: center;
+    }
+
+    h2{
+      text-decoration: underline 2px;
+      text-underline-offset: 2px;
+    }
+
+    body {
+      background-color: whitesmoke;
+    }
+
+    .content-page {
+      background-color: #418ce7;
+      width: 1200px;
+      padding-left: 150px;
+      padding-right: 150px;
+      margin-left: auto;
+      margin-right: auto;
+      color: white;
+    }
+
+    .content {
       display: flex;
-      flex-wrap: wrap;
-      /* Allows content to wrap if needed */
-      width: 80%;
-      /* Adjust width as needed */
-      margin: 10px auto;
-      /* Center the container horizontally */
+      padding-top: 30px;
+      padding-bottom: 30px;
+
     }
 
-    .image-text-pair {
-      display: flex;
-      /* Make elements side-by-side */
-      width: 100%;
-      /* Each pair takes full width */
-      margin-bottom: 1rem;
-      /* Add space between pairs */
+    .content-img {
+      width: 250px;
+      border-radius: 10px;
+
     }
 
-    .image {
-      width: 50%;
-      /* Adjust image width as needed */
-      object-fit: cover;
-      /* Scales image to fill container while maintaining aspect ratio */
+    .content-text {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 40px;
+      padding-right: 40px;
     }
 
-    .text-content {
-      width: 50%;
-      /* Adjust text content width as needed */
-      padding: 1rem;
-      /* Add some padding for better readability */
+    /* 
+    Adding the Page Editor to this Page */
+    footer{
+      background-color: #4e9aff;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-top: solid 2px whitesmoke;
     }
 
-    h2 {
-      margin-bottom: 1rem;
-      /* Add space between headline and text */
+    /* 
+    Setting the link Colour */
+    footer a{
+      color: #ffffff;
+    }
+
+    /* 
+    To indicate that the user to hovering over a link */
+    footer a:hover{
+      text-decoration: underline;
     }
   </style>
-
 </head>
 
 <body>
@@ -59,42 +87,125 @@
       <!-- List of all the main links
       Any class with active, will have a unique look and is depended on what page the user is on -->
       <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="sitemap.html">Site Map</a></li>
-        <li class="right"><a href="feedback.html">Feedback</a></li>
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/shop.html">Shop</a></li>
+        <li><a href="/profile.html">Profile</a></li>
+        <li><a href="/sitemap.html">Site Map</a></li>
+        <li class="right"><a href="./feedback.html">Feedback</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Heading 1 -->
   <div class="banner">
-    <h1>Content Student 4. Cleaning ocean for sealife</h1>
+    <h1>Content Student 2. Human Impact</h1>
   </div>
 
-  <div class="container">
-    <div class="image-text-pair">
-      <img src="./images/naja-bertolt-jensen-BJUoZu0mpt0-unsplash.jpg" alt="Image description 1" class="image">
-      <div class="text-content">
-        <h2>How plastic affects sealife?</h2>
-        <p>Sealife does get affected by plastic in the ocean. Firstly they can get tangled in plastic and may die due to
-          othe sealife. They may die to to choking on the plastic.</p>
+  <!-- Holds the main content of the page -->
+  <div class="content-page">
+    <!-- Each little sub topic will have its own section
+    Each image that is used is also sourced when pressing on the image -->
+
+    <!-- Sub topic - Reducing Plastic Waste and Polution -->
+    <div class="content">
+      <div>
+        <a
+          href="https://unsplash.com/photos/man-in-blue-t-shirt-and-blue-shorts-playing-soccer-on-beach-during-daytime-psRG_u3DLps?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+          <img class="content-img" src="./images/content-st2/ocg-saving-the-ocean-psRG_u3DLps-unsplash.jpg"
+            alt="Polution">
+        </a>
+      </div>
+      <div class="content-text">
+        <h2>Reducing Plastic Waste and Polution</h2>
+        <p>
+          Pollution is getting to a stage where it negatively affects the oceans, harming a habitat that covers 70% of
+          the surface of the Earth.
+          There should be a decrease in dumping waste in the oceans, as most plastics are not biodegradable.
+          So they would take up to 500 years to decompose.<br><br>
+          Efforts must be made to reduce the wastage and pick up of waste. Little by little, this issue can be solved.
+        </p>
       </div>
     </div>
-    <div class="image-text-pair flipped">
-      <div class="text-content">
-        <h2>Headline 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec diam dui. Donec eu elit nisl. Nulla
-          facilisi eros in odio euismod, sed bibendum magna auctor vitae. Donec nec diam dui. Donec eu elit nisl. Nulla
-          facilisi eros in odio euismod, sed bibendum magna auctor vitae.</p>
+
+    <!-- Sub topic - Climate Change -->
+    <div class="content">
+      <div class="content-text">
+        <h2>Climate Change</h2>
+        <p>
+          Climate Change has been an issue that has been on the rise for the last 100 years.
+          As more time passes, more issues will arise. One such is the rising sea level from rising temperatures,
+          causing issues like flooding, and we can see issues where the quality of water is affecting marine life to
+          suffer as well.
+          As a race, we need to ensure we reduce our CO2 emissions as low as possible.
+          Also asking for policy changes to make sure that governments and organisations are aware of these issues and
+          help to solve them.<br><br>
+          Educating others is a powerful tool that will help this planet alot and will mean alot and has the potential
+          to improve our quality of life but also the quality of life for marine animals and land animals.
+
+        </p>
       </div>
-      <img src="./images/Medium-230918_System03_Trip1_extraction_S1H_pic_55.jpg.webp" alt="Image description 2"
-        class="image">
+      <div>
+        <a
+          href="https://unsplash.com/photos/traffic-light-sign-underwater-_whs7FPfkwQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+          <img class="content-img" src="./images/content-st2/kelly-sikkema-_whs7FPfkwQ-unsplash.jpg"
+            alt="climate change">
+        </a>
+      </div>
     </div>
+
+    <!-- Sub topic - Climate Change -->
+    <div class="content">
+      <div>
+        <a
+          href="https://unsplash.com/photos/person-holding-white-plastic-cup-1y8Rgxj7-58?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+          <img class="content-img" src="./images/content-st2/bluewater-sweden-1y8Rgxj7-58-unsplash.jpg" alt="Sustainable Practices">
+        </a>
+      </div>
+      <div class="content-text">
+        <h2>Sustainable Practices</h2>
+        <p>
+          Sustainable practices are a way to help the marine world without compromising your day-to-day lives.
+          There are shops like ours that will sell normal day-to-day items that are commonly thrown away.
+          They are tested and made sure that they are made from fully recycled plastics which does not reduce or harm
+          the quality of the product.
+          There are also items where it is biodegradable that look just like normal products. When in contact with water
+          for a decent amount of time will just dissolve into the water and never be seen again.<br><br>
+          This is a win-win situation where our product that are thrown away are tested and made sure that it will cause
+          as little harm as possible to marine life
+        </p>
+      </div>
+    </div>
+
+    <!-- Sub topic - Marine Life -->
+    <div class="content">
+      <div class="content-text">
+        <h2>Marine Life</h2>
+        <p>
+          Marine life is one of the most important for not only us but for the world.
+          Having a healthy ocean for the world will make a massive impact. So respecting the ocean is another step to making it better.
+          Going on trips should come with good practice, not harming any marine life, and cleaning after your selfs.
+          There should be zones where some endangered marine life should be away from reach for a period as they need to be taken care of.
+
+          <br><br>
+          As these Marine Protected Areas (MPA&#39;s) are another possibility as well.
+
+        </p>
+      </div>
+      <div>
+        <a
+          href="https://unsplash.com/photos/gray-and-black-fish-under-water-hqAGgNsMpEY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+          <img class="content-img" src="./images/content-st2/francesco-ungaro-hqAGgNsMpEY-unsplash.jpg" alt="Marine Life">
+        </a>
+      </div>
+    </div>
+
   </div>
 
-
+  <!-- Footer for page editor -->
+  <footer>
+    <a href="./pageEditor_ST2.html">Page Editor</a>
+  </footer>
 </body>
 
 </html>

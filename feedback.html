@@ -4,87 +4,364 @@
 <head>
   <meta charset="UTF-8">
   <title>Feedback</title>
-  <link rel="icon" type="image/x-icon" href="images/logo.png">
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="./images/logo.png">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
   <style>
     h1 {
       font-size: xx-large;
       text-align: center;
     }
+
+    body {
+      background-color: whitesmoke;
+    }
+
+    form {
+      font-size: larger;
+      color: White;
+      margin-bottom: 30px;
+    }
+
+    /* 
+    Setting the width
+    Setting it in middle of the screen*/
+    .feedback {
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* 
+    Setting the main 2 fieldsets
+    Setting background */
+    fieldset {
+      border-radius: 10px;
+      margin-top: 10px;
+      padding: 10px;
+      padding-bottom: 20px;
+      background-color: #418ce7;
+      border: 2px solid #4e9aff;
+    }
+
+    /* 
+    Setting the Top Text in the Forms */
+    legend {
+      text-align: center;
+      background-color: #418ce7;
+      border-radius: 5px;
+      border-top: 2px #4e9aff solid;
+      padding: 0 10px 0 10px;
+    }
+
+    /* 
+    How the input and select fields look like */
+    input[type=text],
+    input[type=email],
+    select,
+    textarea {
+      color: rgb(53, 53, 53);
+      width: 500px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      border-radius: 5px;
+      border: 1px black solid;
+    }
+
+    /* 
+    The select field would be just a bit to short */
+    select {
+      width: 524px;
+    }
+
+    /* 
+    Making the comment bot */
+    textarea {
+      resize: none;
+      border-radius: 5px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    /* 
+    Making the input and text fields have a different colour on select */
+    input[type=text]:focus,
+    input[type=email]:focus,
+    select,
+    textarea {
+      background-color: whitesmoke;
+    }
+
+    /* 
+    Just setting of the fields */
+    .info,
+    .category-comment,
+    .comment {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    /* 
+    Just sets the position for the text inputs and selector */
+    .comment-box,
+    .category-select {
+      margin-top: 3px;
+    }
+
+    /* 
+    Just making the rating in the center */
+    .rating {
+      text-align: center;
+    }
+
+    /* 
+    Making the buttons in the center and all stacke on each other */
+    .rating-button {
+      text-align: left;
+      width: 140px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 3px;
+    }
+
+    /* 
+    Looks of hte button
+     */
+    .button {
+      padding: 20px 30px;
+      font-size: 15px;
+      background-color: whitesmoke;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-right: 10px;
+      border: black 1px solid
+    }
+
+    /* 
+    When the button is hover the colour will change */
+    .button:hover {
+      background-color: rgb(199, 199, 199);
+    }
+
+    /* 
+    Making  the buttons newxt to each other and in the center */
+    .complete-buttons {
+      display: inline-block;
+    }
+
+    /* 
+    Just the looks of the last fieldset
+    Making sure the buttons are in the center */
+    fieldset[id=final] {
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    /* 
+    CSS to indicate that the user needs to do something */
+    #success {
+      text-align: center;
+      color: red;
+    }
+
+    /* 
+    Just to show the user what fields are important */
+    .required {
+      color: red;
+      margin-left: 5px;
+    }
+
+    /* 
+    Adding the Page Editor to this Page */
+    footer{
+      background-color: #4e9aff;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-top: solid 2px whitesmoke;
+    }
+
+    /* 
+    Setting the link Colour */
+    footer a{
+      color: #ffffff;
+    }
+
+    /* 
+    To indicate that the user to hovering over a link */
+    footer a:hover{
+      text-decoration: underline;
+    }
   </style>
 </head>
 
 <body>
+  <!-- Navigation bar -->
   <header>
-    <img class="logo" src="images/logo.png" alt="logo">
+    <!-- Logo -->
+    <img class="logo" src="./images/logo.png" alt="logo">
     <nav>
+      <!-- List of all the main links
+      Any class with active, will have a unique look and is depended on what page the user is on -->
       <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="sitemap.html">Site Map</a></li>
-        <li class="right"><a class="active" href="feedback.html">Feedback</a></li>
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/shop.html">Shop</a></li>
+        <li><a href="/profile.html">Profile</a></li>
+        <li><a href="/sitemap.html">Site Map</a></li>
+        <li class="right"><a class="active" href="./feedback.html">Feedback</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Main holding the form -->
   <main>
     <h1>Feedback Form</h1>
-    <form>
 
-      <fieldset id="userinfo">
-        <legend>Personal Details</legend>
+    <!-- A Paragraph to tell the user instruction if need be -->
+    <div>
+      <p id="success"></p>
+    </div>
 
-        <label for="firstname">First name: </label>
-        <input type="text" name="firstname" id="firstname" size="20" placeholder="Enter your first name" required>
-        <br>
-        <label for="surname">Surname: </label>
-        <input type="text" name="surname" id="surname" size="20" placeholder="Enter your surname" required>
-        <br>
-        <label for="email">Email address: </label>
-        <input type="email" id="email" name="email" placeholder="Enter your email">
+    <!-- Feedback div-->
+    <div class="feedback">
+      <!-- Form and that when user submits, it will call that specific function and ask the browser for no automatic checks -->
+      <form id="feedbak-form" onsubmit="return validateForm()" novalidate>
 
-      </fieldset>
+        <!-- Asks for user First Name, Surname and Email -->
+        <fieldset id="userinfo">
+          <legend>Personal Details</legend>
 
-      <fieldset id="usercomments">
-        <legend>Rating</legend>
-        Rating:<br>
-        <input type="radio" id="rating1" name="rating" value="1">
-        <label for="rating1">1 - Poor</label><br>
+          <div class="info">
+            <label for="firstname">First name<span class="required">&#42;</span></label><br>
+            <input type="text" name="firstname" id="firstname" size="20" placeholder="Enter your first name" required>
+          </div>
 
-        <input type="radio" id="rating2" name="rating" value="2">
-        <label for="rating2">2 - Fair</label><br>
+          <div class="info">
+            <label for="surname">Surname<span class="required">&#42;</span></label><br>
+            <input type="text" name="surname" id="surname" size="20" placeholder="Enter your surname" required>
+          </div>
 
-        <input type="radio" id="rating3" name="rating" value="3">
-        <label for="rating3">3 - Average</label><br>
+          <div class="info">
+            <label for="email">Email address<span class="required">&#42;</span></label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+          </div>
 
-        <input type="radio" id="rating4" name="rating" value="4">
-        <label for="rating4">4 - Good</label><br>
+        </fieldset>
 
-        <input type="radio" id="rating5" name="rating" value="5">
-        <label for="rating5">5 - Excellent</label><br>
+        <!-- Asks for the user's rating, and any extra comments -->
+        <fieldset id="usercomments">
+          <legend>Rating</legend>
+          <!-- The rating -->
+          <div class="rating">
 
-        <label for="breakfast">Breakfast:</label>
-        <select name="breakfast" id="breakfast">
-          <option value="yes">Include</option>
-          <option value="no">Not Include</option>
-        </select>
-        <br>
-        <label for="requirements">Special Requirements: </label>
-        <textarea name="requirements" id="requirements" rows="5" cols="20">Please provide any special requirements
-            </textarea>
-      </fieldset>
+            <div>
+              User Rating<span class="required">&#42;</span>
+            </div>
 
-      <fieldset id="filed3">
-        <input type="submit" name="button" value="Send" class="rounded-button">
-        <input type="reset" name="button" value="Reset" class="rounded-button">
+            <div class="rating-button">
+              <input type="radio" id="rating1" name="rating" value="1" required>
+              <label for="rating1">1 - Poor</label><br>
+            </div>
 
-      </fieldset>
+            <div class="rating-button">
+              <input type="radio" id="rating2" name="rating" value="2" required>
+              <label for="rating2">2 - Fair</label><br>
+            </div>
+
+            <div class="rating-button">
+              <input type="radio" id="rating3" name="rating" value="3" required>
+              <label for="rating3">3 - Average</label><br>
+            </div>
+
+            <div class="rating-button">
+              <input type="radio" id="rating4" name="rating" value="4" required>
+              <label for="rating4">4 - Good</label><br>
+            </div>
+
+            <div class="rating-button">
+              <input type="radio" id="rating5" name="rating" value="5" required>
+              <label for="rating5">5 - Excellent</label>
+            </div>
+          </div>
+
+          <!-- Asks for user input for a specific page -->
+          <div class="category-comment">
+            <div>
+              <label for="category">Category</label>
+            </div>
+
+            <!-- The option for each page -->
+            <div class="category-select">
+              <select name="category" id="category">
+                <option value="none">None</option>
+                <option value="home">Home</option>
+                <option value="gallery">Gallery</option>
+                <option value="shop">Shop</option>
+                <option value="profile">Profile</option>
+                <option value="sitemap">Sitemap</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Any comments, up to 1000 words -->
+          <div class="comment">
+            <div class="comment-text">
+              <label for="requirements">Any Comments</label>
+            </div>
+            <div class="comment-box">
+              <textarea name="requirements" id="requirements" maxlength="1000" rows="10"
+                placeholder="Enter up to 1000 words..."></textarea>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- The final 2 buttons, one for reset, one for submiting -->
+        <fieldset id="final">
+          <div class="complete-buttons">
+            <input type="submit" name="button" value="Send" class="button">
+            <input type="reset" name="button" value="Reset" class="button">
+          </div>
+
+        </fieldset>
+      </form>
+    </div>
   </main>
 
-  <script>
+  <!-- Footer for page editor -->
+  <footer>
+    <a href="./pageEditor_ST2.html">Page Editor</a>
+  </footer>
 
+  <script>
+    // Function to validate form
+    function validateForm() {
+      // Gets all the data from the fields
+      var firstName = document.getElementById("firstname").value.trim();
+      var lastName = document.getElementById("surname").value.trim();
+      var emailInput = document.getElementById("email");
+      var email = emailInput.value.trim();
+      var rating = document.querySelector('input[name="rating"]:checked');
+
+      // Checks if the email is valid
+      if (!emailInput.checkValidity()) {
+        // When the email isn't valid, it tells the user and fails the submit
+        document.getElementById("success").innerText = "Please enter a valid email address.";
+        return false;
+      }
+
+      // checks if the other fields are not empty
+      if (firstName === "" || lastName === "" || !rating) {
+        // if empty it will tell the user to fill in the required information
+        document.getElementById("success").innerText = "Please fill in all the required information.";
+        return false;
+      }
+
+      // if the checks are all successful then it will tell the user and submit
+      alert("Form submitted successfully!");
+      return true;
+    }
   </script>
 </body>
 
